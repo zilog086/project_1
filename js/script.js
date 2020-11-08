@@ -10,19 +10,29 @@ const personalMovieDB = {
   privat: false
 };
 
-// personalMovieDB.count = numberOfFilms;
+if (personalMovieDB.count < 10) {
+  alert('Prosmotreno malo filmov')
+} else if (personalMovieDB.count >=10 && personalMovieDB.count <= 30) {
+  alert('Vi klassniy zritel');
+} else {
+  alert('Proizoshla oshibka');
+}
 
-let film1 = prompt('Odin iz poslednih vashih filmov ? :', '');
-let mark1 = prompt('Vo skolko otsenite film ? :', '');
-let film2 = prompt('Odin iz poslednih vashih filmov ? :', '');
-let mark2 = prompt('Vo skolko otsenite film ? :', '');
+let i = 0;
+do {
+  let filmName = '',
+      filmMark = '';
 
-personalMovieDB.movies[film1] = mark1;
-personalMovieDB.movies[film2] = mark2;
+  while (filmName === '' || filmName === null || filmName.length > 50) {
+    filmName = prompt('Odin iz poslednih vashih filmov ? :', '');
+  }
+  while (filmMark === '' || filmMark === null) {
+    filmMark = prompt('Vo skolko otsenite film ? :', '');
+  }
+     
+  personalMovieDB.movies[filmName] = filmMark;
 
-
-// for (let i = 0; i < 2; i++) {
-//   personalMovieDB.movies['film' + i] = prompt('Odin iz poslednih vashih filmov ? :', '');
-// }
+  i++;
+} while (i < 2);
 
 console.log(personalMovieDB);
