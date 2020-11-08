@@ -11,9 +11,11 @@ const personalMovieDB = {
 };
 
 if (personalMovieDB.count < 10) {
-  alert('Prosmotreno malo filmov')
+  alert('Prosmotreno malo filmov');
 } else if (personalMovieDB.count >=10 && personalMovieDB.count <= 30) {
-  alert('Vi klassniy zritel');
+  alert('Vi classic zritel');
+} else if (personalMovieDB.count > 30) {
+  alert('Vi kinoman');
 } else {
   alert('Proizoshla oshibka');
 }
