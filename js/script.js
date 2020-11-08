@@ -1,16 +1,16 @@
 'use strict';
 
-let numberOfFilms = +prompt('Skolko filmov posmotreli ? :', 0);
+const numberOfFilms = +prompt('Skolko filmov posmotreli ? :', 0);
 
 const personalMovieDB = {
-  count: 0,
+  count: numberOfFilms,
   movies: {},
   actors: {},
   genres: [],
   privat: false
 };
 
-personalMovieDB.count = numberOfFilms;
+// personalMovieDB.count = numberOfFilms;
 
 let film1 = prompt('Odin iz poslednih vashih filmov ? :', '');
 let mark1 = prompt('Vo skolko otsenite film ? :', '');
